@@ -1,6 +1,11 @@
 import UIKit
 
-class SecondViewController: UIViewController {
+import QRCode
+
+class SecondViewController: UIViewController, UITextFieldDelegate {
+
+	@IBOutlet weak var inputTextField: UITextField!
+	@IBOutlet weak var imageView: UIImageView!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -10,6 +15,18 @@ class SecondViewController: UIViewController {
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
+	}
+
+	@IBAction func generateQrCode() {
+		guard let input = inputTextField.text else {
+			return
+		}
+
+		guard let qrCode = QRCode(input) else {
+			return
+		}
+
+		imageView.image = qrCode.image
 	}
 }
 
