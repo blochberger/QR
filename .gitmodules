@@ -1,6 +1,6 @@
 [submodule "Dependencies/QRCodeReader"]
 	path = Dependencies/QRCodeReader
-	url = git@github.com:blochberger/QRCodeReader.git
+	url = https://github.com/blochberger/QRCodeReader.git
 [submodule "Dependencies/QRCode"]
 	path = Dependencies/QRCode
-	url = git@github.com:blochberger/QRCode.git
+	url = https://github.com/blochberger/QRCode.git
