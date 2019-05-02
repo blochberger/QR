@@ -48,8 +48,9 @@ class FirstViewController: UIViewController {
 				self.reader = nil
 			}
 		} catch {
-			outputLabel.text = error.localizedDescription
-			outputLabel.textColor = UIColor(red: 1.0, green: 59.0 / 255.0, blue: 48.0 / 255.0, alpha: 1.0)
+			let alert = UIAlertController(title: "Failed to scan QR code", message: error.localizedDescription, preferredStyle: .alert)
+			alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+			self.present(alert, animated: true)
 			self.reader = nil
 		}
 	}
