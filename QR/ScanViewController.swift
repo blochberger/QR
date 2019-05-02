@@ -2,7 +2,7 @@ import UIKit
 
 import QRCodeReader
 
-class FirstViewController: UIViewController {
+class ScanViewController: UIViewController {
 
 	@IBOutlet weak var outputLabel: UILabel!
 	@IBOutlet weak var copyToClipboardButton: UIButton!

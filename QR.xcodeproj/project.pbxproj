@@ -10,8 +10,8 @@
 		6049CFF81F96496A00AABC85 /* QRCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6049CFEF1F9648D100AABC85 /* QRCode.framework */; };
 		6049CFF91F96496A00AABC85 /* QRCode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6049CFEF1F9648D100AABC85 /* QRCode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		60B2FE1B1F3B1C5A00E23DF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2FE1A1F3B1C5A00E23DF9 /* AppDelegate.swift */; };
-		60B2FE1D1F3B1C5A00E23DF9 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2FE1C1F3B1C5A00E23DF9 /* FirstViewController.swift */; };
-		60B2FE1F1F3B1C5A00E23DF9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2FE1E1F3B1C5A00E23DF9 /* SecondViewController.swift */; };
+		60B2FE1D1F3B1C5A00E23DF9 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2FE1C1F3B1C5A00E23DF9 /* ScanViewController.swift */; };
+		60B2FE1F1F3B1C5A00E23DF9 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2FE1E1F3B1C5A00E23DF9 /* CreateViewController.swift */; };
 		60B2FE221F3B1C5A00E23DF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60B2FE201F3B1C5A00E23DF9 /* Main.storyboard */; };
 		60B2FE241F3B1C5A00E23DF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60B2FE231F3B1C5A00E23DF9 /* Assets.xcassets */; };
 		60B2FE271F3B1C5A00E23DF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60B2FE251F3B1C5A00E23DF9 /* LaunchScreen.storyboard */; };
@@ -104,8 +104,8 @@
 		6049CFE31F9648D100AABC85 /* QRCode.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QRCode.xcodeproj; path = Dependencies/QRCode/QRCode.xcodeproj; sourceTree = "<group>"; };
 		60B2FE171F3B1C5A00E23DF9 /* QR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60B2FE1A1F3B1C5A00E23DF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		60B2FE1C1F3B1C5A00E23DF9 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		60B2FE1E1F3B1C5A00E23DF9 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		60B2FE1C1F3B1C5A00E23DF9 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		60B2FE1E1F3B1C5A00E23DF9 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		60B2FE211F3B1C5A00E23DF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		60B2FE231F3B1C5A00E23DF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60B2FE261F3B1C5A00E23DF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -161,8 +161,8 @@
 			children = (
 				60B2FE2E1F3B1C9500E23DF9 /* Supporting Files */,
 				60B2FE1A1F3B1C5A00E23DF9 /* AppDelegate.swift */,
-				60B2FE1C1F3B1C5A00E23DF9 /* FirstViewController.swift */,
-				60B2FE1E1F3B1C5A00E23DF9 /* SecondViewController.swift */,
+				60B2FE1C1F3B1C5A00E23DF9 /* ScanViewController.swift */,
+				60B2FE1E1F3B1C5A00E23DF9 /* CreateViewController.swift */,
 				60B2FE201F3B1C5A00E23DF9 /* Main.storyboard */,
 				60B2FE251F3B1C5A00E23DF9 /* LaunchScreen.storyboard */,
 			);
@@ -334,9 +334,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60B2FE1F1F3B1C5A00E23DF9 /* SecondViewController.swift in Sources */,
+				60B2FE1F1F3B1C5A00E23DF9 /* CreateViewController.swift in Sources */,
 				60B2FE1B1F3B1C5A00E23DF9 /* AppDelegate.swift in Sources */,
-				60B2FE1D1F3B1C5A00E23DF9 /* FirstViewController.swift in Sources */,
+				60B2FE1D1F3B1C5A00E23DF9 /* ScanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

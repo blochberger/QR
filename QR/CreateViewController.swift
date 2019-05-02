@@ -2,7 +2,7 @@ import UIKit
 
 import QRCode
 
-class SecondViewController: UIViewController, UITextFieldDelegate {
+class CreateViewController: UIViewController, UITextFieldDelegate {
 
 	@IBOutlet weak var inputTextField: UITextField!
 	@IBOutlet weak var imageView: UIImageView!
