@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -36,24 +34,38 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="bottom" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="QBb-lf-5T2">
-                                        <rect key="frame" x="0.0" y="500" width="343" height="90"/>
+                                        <rect key="frame" x="0.0" y="466" width="343" height="124"/>
                                         <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fcY-kh-58r">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manually select QR Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0G3-3Z-Ucc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="294" height="31"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jaF-cl-f3j">
+                                                        <rect key="frame" x="294" y="0.0" width="51" height="31"/>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRj-At-w1c">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                                <rect key="frame" x="0.0" y="31" width="343" height="31"/>
                                                 <state key="normal" title="Scan QR Code"/>
                                                 <connections>
                                                     <action selector="scanQrCode" destination="9pv-A4-QxB" eventType="primaryActionTriggered" id="FOy-pF-UPs"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRi-QD-pXk">
-                                                <rect key="frame" x="0.0" y="30" width="343" height="30"/>
+                                                <rect key="frame" x="0.0" y="62" width="343" height="31"/>
                                                 <state key="normal" title="Copy to Clipboard"/>
                                                 <connections>
                                                     <action selector="copyToClipboard" destination="9pv-A4-QxB" eventType="primaryActionTriggered" id="vsm-Ml-cel"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGz-RI-Yw8">
-                                                <rect key="frame" x="0.0" y="60" width="343" height="30"/>
+                                                <rect key="frame" x="0.0" y="93" width="343" height="31"/>
                                                 <state key="normal" title="Open URL"/>
                                                 <connections>
                                                     <action selector="openUrl" destination="9pv-A4-QxB" eventType="primaryActionTriggered" id="8be-k1-j32"/>
@@ -79,6 +91,7 @@
                     <tabBarItem key="tabBarItem" title="Scan" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="copyToClipboardButton" destination="kRi-QD-pXk" id="eSl-au-90v"/>
+                        <outlet property="manualSelection" destination="jaF-cl-f3j" id="Izo-yc-Q1z"/>
                         <outlet property="openUrlButton" destination="ZGz-RI-Yw8" id="2ky-Sa-9Pa"/>
                         <outlet property="outputLabel" destination="Qob-uK-9Ol" id="e4s-vF-U8G"/>
                     </connections>

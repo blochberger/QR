@@ -7,7 +7,8 @@ class FirstViewController: UIViewController {
 	@IBOutlet weak var outputLabel: UILabel!
 	@IBOutlet weak var copyToClipboardButton: UIButton!
 	@IBOutlet weak var openUrlButton: UIButton!
-
+	@IBOutlet weak var manualSelection: UISwitch!
+	
 	private var reader: QRCodeReader? = nil
 
 	override func viewDidLoad() {
@@ -31,6 +32,8 @@ class FirstViewController: UIViewController {
 		reset()
 
 		reader = QRCodeReader()
+		reader!.manualSelection = manualSelection.isOn
+
 		do {
 			try	reader!.startScanning() {
 				decodedQrCode in
